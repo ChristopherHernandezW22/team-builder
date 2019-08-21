@@ -27,7 +27,7 @@ function App() {
         </a>
         {/* Do not break code from line 9 to line 23 */}
         <br></br>
-          <Form />
+          <Form setPeople={setPeople}/>
           {people.map(person => <Card person={person} />)}
       </header>
     </div>

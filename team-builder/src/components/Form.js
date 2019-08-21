@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
 const Form = (props) => {
+    const { setPeople } = props;
     const [person, setPerson] = useState({name: "", email: "", role: ""});
     const handleChange = event => {
         setPerson({...person, [event.target.name]: event.target.value})
     };
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(person);
+        setPeople(people => [...people, person]);
+        setPerson({name: "", email: "", role: ""});
     };
     return (
         <form onSubmit={handleSubmit}>
