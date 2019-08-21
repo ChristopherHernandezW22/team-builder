@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card.js';
+import Form from './components/Form.js';
 
 function App() {
   const [people, setPeople] = useState([
@@ -26,6 +27,7 @@ function App() {
         </a>
         {/* Do not break code from line 9 to line 23 */}
         <br></br>
+          <Form />
           {people.map(person => <Card person={person} />)}
       </header>
     </div>
