@@ -5,8 +5,12 @@ const Form = (props) => {
     const handleChange = event => {
         setPerson({...person, [event.target.name]: event.target.value})
     };
+    const handleSubmit = event => {
+        event.preventDefault();
+        console.log(person);
+    };
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input  placeholder="name"
                     value={person.name}
                     name="name"
