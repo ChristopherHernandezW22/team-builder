@@ -3,7 +3,7 @@ import React from 'react';
 // { name: "", email: "", role: "" }
 
 const Card = (props) => {
-    // Two ways to this, shown in line 7 & 8
+    // Two ways to this, shown in line 7 & 8 (8 is probably the better way)
     // const person = props.person;
     const { person } = props;
     return (
